@@ -36,7 +36,7 @@ class Widgets_Manager {
 	/**
 	 * Init widgets.
 	 *
-	 * Initialize Elementor widgets manager. Include all the the widgets files
+	 * Initialize Elementor widgets manager. Include all the widgets files
 	 * and register each Elementor and WordPress widget.
 	 *
 	 * @since 2.0.0
@@ -60,6 +60,7 @@ class Widgets_Manager {
 			'star-rating',
 			'image-carousel',
 			'image-gallery',
+			'image-generation',
 			'icon-list',
 			'counter',
 			'progress',
