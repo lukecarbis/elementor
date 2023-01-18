@@ -60,7 +60,6 @@ class Widgets_Manager {
 			'star-rating',
 			'image-carousel',
 			'image-gallery',
-			'image-generation',
 			'icon-list',
 			'counter',
 			'progress',

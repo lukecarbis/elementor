@@ -22,6 +22,7 @@ import ResponsiveBar from './regions/responsive-bar/responsive-bar';
 import Selection from './components/selection/manager';
 import LandingPageLibraryModule from 'elementor/modules/landing-pages/assets/js/editor/module';
 import ElementsColorPicker from 'elementor/modules/elements-color-picker/assets/js/editor/module';
+import ImageGenerationModule from 'elementor/modules/image-generation/assets/js/editor/module';
 import Breakpoints from 'elementor-utils/breakpoints';
 import Events from 'elementor-utils/events';
 import DocumentComponent from './document/component';
@@ -394,6 +395,7 @@ export default class EditorBase extends Marionette.Application {
 		}
 
 		this.modules.elementsColorPicker = new ElementsColorPicker();
+		this.modules.imageGenerationModule = new ImageGenerationModule();
 
 		// TODO: Move to elementor:init-data-components
 		$e.components.register( new DataGlobalsComponent() );

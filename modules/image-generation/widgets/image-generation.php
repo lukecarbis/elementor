@@ -1,12 +1,17 @@
 <?php
-namespace Elementor;
+namespace Elementor\Modules\ImageGeneration\Widgets;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
-use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
+use Elementor\Controls_Manager;
+use Elementor\Utils;
+use Elementor\Widget_Base;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 /**
  * Elementor image generation.
@@ -15,7 +20,7 @@ use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
  *
  * @since 1.0.0
  */
-class Widget_Image_Generation extends Widget_Base {
+class Image_Generation extends Widget_Base {
 
 	/**
 	 * Get widget name.
@@ -155,7 +160,8 @@ class Widget_Image_Generation extends Widget_Base {
 		$this->add_render_attribute( 'generated_image_size', 'class', 'elementor-size-' . $settings['size'] );
 
 		$image_html = sprintf(
-			'<img %1$s %2$s %3$s />',
+			'<%1$s %2$s %3$s %4$s />',
+			Utils::validate_html_tag( 'img' ),
 			$this->get_render_attribute_string( 'generated_image_src' ),
 			$this->get_render_attribute_string( 'generated_image_alt' ),
 			$this->get_render_attribute_string( 'generated_image_size' )
